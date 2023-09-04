@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>login</title>
+	<link rel="stylesheet" type="text/css" href="userlogin.component.css">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="main">  	
+		<input type="checkbox" id="chk" aria-heidden="true">
+			<div class="signup">
+				<form>
+					<label for="chk" aria-hidden="true">Sign up</label>
+					<input type="text" name="zid" placeholder="zid" required="" [(ngModel)]="signupObj.zid">
+                    <input type="text" name="name" placeholder="Name" required="" [(ngModel)]="signupObj.name">
+					<input type="email" name="email" placeholder="Email" required="" [(ngModel)]="signupObj.email">
+					<input type="password" name="pswd" placeholder="Password" required="" [(ngModel)]="signupObj.password">
+					<button>Sign up</button>
+				</form>
+			</div>
+
+			<div class="login">
+				<form>
+					<label for="chk" aria-hidden="true">Login</label>
+					<input type="zid" name="zid" placeholder="zid" required="">
+					<input type="password" name="pswd" placeholder="Password" required="">
+					<button>Login</button>
+				</form>
+			</div>
+	</div>
+</body>
+</html>
