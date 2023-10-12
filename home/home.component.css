@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap');
+
+/* *{
+    box-sizing: border-box;
+    font-family:'Poppins', sans-serif ;
+} */
+/* .body-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #343F4F;
+} */
+
+@keyframes fadeInVerticalText {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+    
+    
+    .dynamic-txts li {
+      opacity: 0; /* Initially hide all list items */
+      animation: fadeIn 1s ease-in-out forwards; /* Apply the animation */
+    }
+    
+    /* Delay the animation for each list item */
+    .dynamic-txts li:nth-child(1) {
+      animation-delay: 0s; /* Delay for the first item (0 seconds) */
+    }
+    
+    .dynamic-txts li:nth-child(2) {
+      animation-delay: 1s; /* Delay for the second item (1 second) */
+    }
+    
+    .dynamic-txts li:nth-child(3) {
+      animation-delay: 2s; /* Delay for the third item (2 seconds) */
+    }
+    
+    .dynamic-txts li:nth-child(4) {
+      animation-delay: 3s; /* Delay for the fourth item (3 seconds) */
+    }
+  
+  
+  
+  .wrapper {
+    text-align: left; /* Align text to the left side */
+    position: relative;
+    z-index: 2; /* Ensure the text is above the video */
+    padding-left: 20px; /* Add padding for better visibility */
+  }
+  
+  .static-txt h3 {
+    font-size: 4rem;
+    color: white;
+    
+  }
+  
+  .static-txt {
+    position: relative;
+  }
+  
+  .static-txt h3 {
+    font-size: 3rem;
+    color: white;
+    position: absolute;
+    top: 60px;
+    left: 60px;
+  }
+  
+  
+  .dynamic-txts {
+    
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .centered-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Set the height to 100% of the viewport height */
+  }
+  
+  /* Style the list items */
+  .dynamic-txts li {
+    font-size: 2.5rem;
+    color: rgb(218, 55, 55);
+    transform: translateY(-50%); /* Vertically center the items */
+    position:relative;
+    left: 20%;
+    top:110px;
+    animation: fadeInVerticalText 4s ease-in-out infinite alternate;
+    opacity: 0;
+    width: 200px; /* Set the width */
+    height: 50px; /* Set the height */
+    text-align: center; /* Center the text horizontally */
+    line-height: 50px; /* Center the text vertically */
+  }
+  
+  /* .dynamic-txts li {
+  
+    font-size: 2.5rem;
+    color: white;
+    animation: fadeInVerticalText 4s ease-in-out infinite alternate; /* Apply the fadeInVerticalText animation to the text */
+   
+   */
+  
+  /* Ensure the background video is fixed */
+  .video-container {
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* height: 100%; */
+    overflow: hidden;
+    z-index: 1;
+     /* Place the video behind the text */
+  }
+  
+  .background-video {
+    left: 0;
+    width: 100%;
+    /* height: 100%; */
+    object-fit: cover;
+  }
